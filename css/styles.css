@@ -1,4 +1,4 @@
-    /********** Base styles **********/
+ /********** Base styles **********/
     * {
         box-sizing: border-box;
     }
@@ -11,69 +11,58 @@
     }
 
     p {
-        margin: 40px 15px 15px 15px;
+        margin: 50px 15px 15px 15px;
         font-family: 'Open Sans', sans-serif;
         text-align: left;
     }
 
-    #home-tiles {
+    .section {
         position: relative;
-        margin: 0px auto 0px auto;
-        text-align: center;
-    }
-
-    #chicken,
-    #beef,
-    #sushi {
-        position: relative;
-        margin: 15px auto 0px auto;
-        border: 1px solid black;
+        margin: 8px;
         background-color: #F2F2F2;
-        padding: 8px;
+        border: 1px solid #000000;
     }
 
-    #chicken h2,
-    #beef h2,
-    #sushi h2 {
+    h2.chicken, h2.beef, h2.sushi {
         position: absolute;
         top: 0;
         right: 0;
         width: 150px;
-        padding: 5px;
-        text-align: center;
         border: 1px solid black;
         font-size: 1.25em;
         font-family: 'Lato', sans-serif;
+        text-align: center;
         margin: 0px;
+        padding: 5px;
     }
 
-    #chicken h2 {
+    h2.chicken {
         background-color: #311B92;
         color: #FFFFFF;
     }
 
-    #beef h2 {
+    h2.beef {
         background-color: #1E88E5;
         color: #FFFFFF;
     }
 
-    #sushi h2 {
+    h2.sushi {
         background-color: #F48FB1;
     }
-
     /* Simple Responsive Framework. */
     .row {
         width: 100%;
+        position: relative;
     }
 
-    /********** Large devices only **********/
+    /********** Large devices only Base **********/
     @media (min-width: 992px) {
 
         .col-lg-4,
         .col-lg-6,
         .col-lg-12 {
             float: left;
-            border: 1px solid black;
+            padding: 5px;
         }
 
         .col-lg-4 {
@@ -89,14 +78,13 @@
         }
     }
 
-    /********** Medium devices only **********/
+    /********** Medium devices only Base **********/
     @media (min-width: 768px) and (max-width: 991px) {
 
         .col-md-4,
         .col-md-6,
         .col-md-12 {
             float: left;
-            border: 1px solid black;
         }
 
         .col-md-4 {
@@ -110,49 +98,20 @@
         .col-md-12 {
             width: 100%;
         }
-    }
 
-    /********** Large devices only **********/
-    @media (min-width: 992px) {
-
-        .col-lg-4 {
-            width: 31.3%;
-            float: left;
-        }
-
-        #chicken,
-        #beef,
-        #sushi {
-            margin-right: 8px;
-            margin-left: 8px;
-        }
-
-        #home-tiles {
-            margin-left: 10px;
+        .section {
+        	min-height: 189px;
         }
     }
 
 
-    /********** Medium devices only **********/
-    @media (min-width: 768px) and (max-width: 991px) {
+    /********** Small devices only Base **********/
+    @media (max-width: 767px) {
 
-        .col-md-6 {
-            width: 48%;
-            margin: 1%;
-            float: left;
-        }
-
+        .col-md-4,
+        .col-md-6,
         .col-md-12 {
-            width: 98%;
-            margin: 1%;
             float: left;
-        }
+        }   
 
-        #chicken {
-            margin-right: 15px;
-        }
 
-        #home-tiles {
-            margin-left: 8px;
-        }
-    }
